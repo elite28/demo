@@ -9,7 +9,12 @@
   <b>Body:</b>
   <%= @post.body %>
 </p>
-
+<p>
+  <b>Avatar:</b>
+  <%= image_tag @post.avatar.url %>
+  <%= image_tag @post.avatar.url(:medium) %>
+  <%= image_tag @post.avatar.url(:thumb) %>
+</p>
 
 <%= link_to 'Edit', edit_post_path(@post) %> |
 <%= link_to 'Back', posts_path %>
